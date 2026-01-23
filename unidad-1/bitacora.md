@@ -15,9 +15,22 @@ Como persona que desea irse por la rama de *Experiencias Interactivas* creo que 
 
 ---
 
+### ACTIVIDAD 02  
+
+**¿Qué es el diseño/arte generativo?**  
+
+El arte generativo es una práctica que se vale de un sistema con cierto grado de autonomía, en el cuales definen unas reglas, en algunos casos por medio de códigos que contienen instrucciones que facilitaran la realización de una obra (uno de los ejemplos de arte generativo muestra por ejemplo como por medio del código se asignan formas y colores para hacer arte abstracto). Siendo así como se basa la generación de productos y comunicaciones basadas en datos, influencias sistemáticas y prográmicas multifacéticas  
+
+**¿Cómo podrías aplicar lo que has visto en tu perfil profesional?**  
+
+El diseño/arte generativo en muy útil en el perfil profesional porque proporciona al usuario experiencias únicas, innovativas y automatizadas, aumentando las posibilidades en el factor de personalización y mejora el factor de la carga de trabajo sin recurrir a otras herramientas controversiales que hacen que la carga de trabajo disminuya de manera poco ética; no afecta la creatividad y mejora el ingenio a la hora de inventar nuevas experiencias multifaceticas, proviendo narrativas dinamicas, automatización de enternos visuales, parametrizaciones, entre otras cosas
+
+--- 
+
 
 ## Bitácora de aplicación 
 
 
 
 ## Bitácora de reflexión
+
