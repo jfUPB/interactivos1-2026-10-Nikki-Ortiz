@@ -27,10 +27,20 @@ El diseño/arte generativo en muy útil en el perfil profesional porque proporci
 
 --- 
 
+> NOTA: Actividad 3 hecha en clase en p5js y en micr.bit, no hay preguntas para responder en la bitacora
+
+### ACTIVIDAD 04
+
+**INSTRUCCIÓN:** ¿Por qué no funcionaba el programa con was_pressed() y por qué funciona con is_pressed()? Explica detalladamente
+
+La clave esta en la diapositiva 2 donde se nos explica que button_a.was_pressed() se usa para detectar si el botón *HA SIDO* presionado, mientras que button_a.is_pressed() si quieres saber si el botón *ESTÁ* presionado en ese momento, además de que nos da la especificación de que was_pressed() es mas para *EVENTOS ÚNICOS*, como lo son un click, pero si usas is_pressed(), el programa podría enviar *MÚLTIPLES* mensajes si el botón se *MANTIENE* presionado.
+
+Si bien el programa consiste en que el circulo cambie de color mientras se presiona el botón y cambie cuando no esta presionado, la clave está en que son 2 eventos y no uno, lo que significa que debe funcionar de un color si se mantiene precionado y cuando no lo está de otro, por esto es que funciona con is.pressed y no con was.pressed, este último funcionaria si solo necesitaramos la instruccion de que cambie de color si se hace click y no regresara a otro color cuando no está presionado, esto se refleja en la corrección cuando is.pressed cuenta con un if y un else que corresponde al código de p5.js que tiene 2 eventos también.
 
 ## Bitácora de aplicación 
 
 
 
 ## Bitácora de reflexión
+
 
