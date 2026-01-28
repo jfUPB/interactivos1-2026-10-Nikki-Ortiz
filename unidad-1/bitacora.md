@@ -39,8 +39,76 @@ Si bien el programa consiste en que el circulo cambie de color mientras se presi
 
 ## Bitácora de aplicación 
 
+### ACTIVIDAD 05  
 
+**INSTRUCCIÓN:** Crea un programa en p5.js que muestre un círculo en la pantalla. Utiliza los botones A y B del micro:bit para controlar la posición en x del círculo en el canvas de p5.js.
 
+**CÓDIGO DE MICRO:BIT**
+``` py
+# Imports go at the top 
+from microbit import *
+# Siempre recordar poner el uart para iniciar la comunicacion serial
+uart.init(baudrate=115200)
+
+while True: # Se utiliza este loop para que el programa siga corriedo 
+    if button_a.was_pressed(): #Si el botón A es precionado entonces manda A
+        uart.write('A')
+    if button_b.was_pressed(): #Si el botón A es precionado entonces manda A
+        uart.write('B')
+```
+
+**CÓDIGO DE P5.JS**
+``` js
+let port;
+let connectBtn;
+let dirX;
+
+function setup() {
+  createCanvas(400, 400);
+  background(220);
+  port = createSerial();
+  connectBtn = createButton("Connect to micro:bit");
+  connectBtn.position(80, 300);
+  connectBtn.mousePressed(connectBtnClick);
+  fill("white");
+  dirX = width / 2;
+  ellipse(dirX, height / 2, 100, 100);
+}
+
+function draw() {
+  if (port.availableBytes() > 0) {
+    let dataRx = port.read(1);
+
+    if (dataRx == "A") {
+      dirX = dirX - 30;
+    }
+    if (dataRx == "B") {
+      dirX = dirX + 30;
+    }
+    background(220);
+
+    ellipse(dirX, height / 2, 100, 100);
+  }
+
+  if (!port.opened()) {
+    connectBtn.html("Connect to micro:bit");
+  } else {
+    connectBtn.html("Disconnect");
+  }
+}
+
+function connectBtnClick() {
+  if (!port.opened()) {
+    port.open("MicroPython", 115200);
+  } else {
+    port.close();
+  }
+}
+```
+**FUNCIONAMIENTO:** 
+
+Se utilizo el código de la Actividad 03 como base para empezar este código, es así como empezamos declarando la variable dirX para después asignarle
 ## Bitácora de reflexión
+
 
 
