@@ -107,9 +107,10 @@ function connectBtnClick() {
 ```
 **FUNCIONAMIENTO:** 
 
-En setup() se crea el lienzo, el botón de conexión y se dibuja el círculo en el centro. En draw() el programa revisa si llegan datos desde la micro:bit, Ssi recibe la letra "A", el círculo se mueve a la izquierda, y si recibe "B", se mueve a la derecha. Cada vez que se mueve, la pantalla se limpia y se vuelve a dibujar el círculo en la nueva posición. El botón permite conectarse o desconectarse de la micro:bit y cambia su texto según el estado de la conexión.
+En setup() se crea el lienzo, el botón de conexión y se dibuja el círculo en el centro. En draw() el programa revisa si llegan datos desde la micro:bit, Ssi recibe la letra "A", el círculo se mueve a la izquierda, y si recibe "B", se mueve a la derecha (mediante el uso de sumas o restas de la posición del circulo). Cada vez que se mueve, la pantalla se limpia y se vuelve a dibujar el círculo en la nueva posición. El botón permite conectarse o desconectarse de la micro:bit y cambia su texto según el estado de la conexión.
 
 ## Bitácora de reflexión
+
 
 
 
