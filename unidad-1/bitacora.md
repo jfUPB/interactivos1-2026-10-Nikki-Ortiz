@@ -107,8 +107,10 @@ function connectBtnClick() {
 ```
 **FUNCIONAMIENTO:** 
 
-Se utilizo el código de la Actividad 03 como base para empezar este código, es así como empezamos declarando la variable dirX para después asignarle
+En setup() se crea el lienzo, el botón de conexión y se dibuja el círculo en el centro. En draw() el programa revisa si llegan datos desde la micro:bit, Ssi recibe la letra "A", el círculo se mueve a la izquierda, y si recibe "B", se mueve a la derecha. Cada vez que se mueve, la pantalla se limpia y se vuelve a dibujar el círculo en la nueva posición. El botón permite conectarse o desconectarse de la micro:bit y cambia su texto según el estado de la conexión.
+
 ## Bitácora de reflexión
+
 
 
 
