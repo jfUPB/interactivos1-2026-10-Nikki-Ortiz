@@ -19,7 +19,7 @@ Como persona que desea irse por la rama de *Experiencias Interactivas* creo que 
 
 **¿Qué es el diseño/arte generativo?**  
 
-El arte generativo es una práctica que se vale de un sistema con cierto grado de autonomía, en el cuales definen unas reglas, en algunos casos por medio de códigos que contienen instrucciones que facilitaran la realización de una obra (uno de los ejemplos de arte generativo muestra por ejemplo como por medio del código se asignan formas y colores para hacer arte abstracto). Siendo así como se basa la generación de productos y comunicaciones basadas en datos, influencias sistemáticas y prográmicas multifacéticas  
+El arte generativo es una práctica que se vale de un sistema con cierto grado de autonomía, en el cual se definen unas reglas, en algunos casos por medio de códigos que contienen instrucciones que facilitarán la realización de una obra (uno de los ejemplos de arte generativo muestra, por ejemplo, cómo por medio del código se asignan formas y colores para hacer arte abstracto). Siendo así como se basa la generación de productos y comunicaciones basadas en datos, influencias sistemáticas y programáticas multifacéticas. 
 
 **¿Cómo podrías aplicar lo que has visto en tu perfil profesional?**  
 
@@ -33,7 +33,7 @@ El diseño/arte generativo en muy útil en el perfil profesional porque proporci
 
 **INSTRUCCIÓN:** ¿Por qué no funcionaba el programa con was_pressed() y por qué funciona con is_pressed()? Explica detalladamente
 
-La clave esta en la diapositiva 2 donde se nos explica que button_a.was_pressed() se usa para detectar si el botón *HA SIDO* presionado, mientras que button_a.is_pressed() si quieres saber si el botón *ESTÁ* presionado en ese momento, además de que nos da la especificación de que was_pressed() es mas para *EVENTOS ÚNICOS*, como lo son un click, pero si usas is_pressed(), el programa podría enviar *MÚLTIPLES* mensajes si el botón se *MANTIENE* presionado.
+La clave está en la diapositiva 2, donde se nos explica que button_a.was_pressed() se usa para detectar si el botón *HA SIDO* presionado, mientras que button_a.is_pressed() si quieres saber si el botón *ESTÁ* presionado en ese momento, además de que nos da la especificación de que was_pressed() es más para *EVENTOS ÚNICOS*, como lo es un click, pero si usas is_pressed(), el programa podría enviar *MÚLTIPLES* mensajes si el botón se *MANTIENE* presionado.
 
 Si bien el programa consiste en que el circulo cambie de color mientras se presiona el botón y cambie cuando no esta presionado, la clave está en que son 2 eventos y no uno, lo que significa que debe funcionar de un color si se mantiene precionado y cuando no lo está de otro, por esto es que funciona con is.pressed y no con was.pressed, este último funcionaria si solo necesitaramos la instruccion de que cambie de color si se hace click y no regresara a otro color cuando no está presionado, esto se refleja en la corrección cuando is.pressed cuenta con un if y un else que corresponde al código de p5.js que tiene 2 eventos también.
 
@@ -110,6 +110,17 @@ function connectBtnClick() {
 En setup() se crea el lienzo, el botón de conexión y se dibuja el círculo en el centro. En draw() el programa revisa si llegan datos desde la micro:bit, Ssi recibe la letra "A", el círculo se mueve a la izquierda, y si recibe "B", se mueve a la derecha (mediante el uso de sumas o restas de la posición del circulo). Cada vez que se mueve, la pantalla se limpia y se vuelve a dibujar el círculo en la nueva posición. El botón permite conectarse o desconectarse de la micro:bit y cambia su texto según el estado de la conexión.
 
 ## Bitácora de reflexión
+
+### ACTIVIDAD 06
+
+**INSTRUCCI0NES:** Vas a repasar lo aprendido en esta unidad. Regresa a la actividad 4 y trata de explicar en tus propias palabras de la manera más detallada que puedas cómo funciona el sistema físico interactivo. Analiza cada parte del código y su función dentro del sistema. Si aún tienes dudas sobre alguna parte, aprovecha para aclararlas.  
+
+
+A: En la actividad 4 tenemos un sistema interactivo que permite utilizar un input como apretar un botón (en este caso A), un proceso como esperar a que los botones sean presionados y suceda un evento que cumpla con la programación del sistema, para obtener un output en donde en pantalla se mostrará el resultado de que el usuario presione un botón, que será que un cuadrado dibujado en un canvas establecido en p5.js cambie de color de acuerdo con si el botón está presionado o no.
+
+Es por esto que empezamos programando en **micro.bit** un código que nos permita decirle al sistema que si se presiona "A", la UART mande "A" al micro:bit, y que si no presiona ningún botón, UART mande "N" al micro:bit; posteriormente, programamos las funcionalidades en p5.js, en donde se inicializa el port y las conexiones para poder añadir la variable gobal **setup** en donde se crea el botón para la conexión (con el click para conectar), el canvas y el fondo. Después, se crea la variable global **draw**, en donde se crea el cuadrado, se le asigna un tamaño, una posición y se le dice al programa que, si el micro:bit está conectado al computador y la conexión fue inicializada mediante el botón que creamos, entonces que el cuadrado se pinte de rojo si el botón "A" del micro:bit es presionado y, si no se presiona nada, que esté en verde. Finalmente, se especifica que en la función connect, en caso de que se le dé al botón de "Connect Micro:bit" el programa debe inicializar conexión a una velocidad establecida; si no se le da al botón, entonces el port está cerrado.
+
+
 
 
 
