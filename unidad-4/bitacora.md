@@ -116,6 +116,20 @@ Hay que hacer una transición para que el micro:bit pueda interactuar con el pro
 
 <img width="1657" height="1480" alt="Captura de pantalla 2026-03-04 153852" src="https://github.com/user-attachments/assets/a93a212e-eed9-4d32-80f6-5ca408966dcd" />
 
+- mkdir: crear carpeta
+- clone: Copiar
+- Clear: Limpiar consola
+- control + c: apagar servidor 
+- cd: Change Directory + donde se quiera entrar
+- ls: Mostrar Contenido de la posición actual
+-  npm install: instalar modulos con node
+- node bridgeServer.js: para abrir el servidor
+- crear carpeta: 
+- copiar el repositorio en el sistema:
+
+**PARA CONECTARSE A MICRO: BIT**
+
+-  node bridgeServer.js --device microbit
 
 </details>
 
@@ -125,3 +139,4 @@ Hay que hacer una transición para que el micro:bit pueda interactuar con el pro
 
 
 ## Bitácora de reflexión
+
