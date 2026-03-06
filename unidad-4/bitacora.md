@@ -110,6 +110,11 @@ Hay que hacer una transición para que el micro:bit pueda interactuar con el pro
 
 <details>
 
+**COMO FUNCIONA LA APP**
+
+<img width="1918" height="846" alt="imagen" src="https://github.com/user-attachments/assets/3201baf0-4917-43e6-922f-32a330f9edea" />
+
+
 <summary>GITBASH</summary>
 
 ### INSTRUCCIONES Y CAPTURA DE GITBASH
@@ -125,7 +130,8 @@ Hay que hacer una transición para que el micro:bit pueda interactuar con el pro
 -  npm install: instalar modulos con node
 - node bridgeServer.js: para abrir el servidor
 - crear carpeta: 
-- copiar el repositorio en el sistema:
+- copiar el repositorio en el sistema: git clone
+- Abrir visual: code .
 
 **PARA CONECTARSE A MICRO: BIT**
 
@@ -139,4 +145,5 @@ Hay que hacer una transición para que el micro:bit pueda interactuar con el pro
 
 
 ## Bitácora de reflexión
+
 
