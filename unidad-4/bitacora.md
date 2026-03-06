@@ -108,12 +108,13 @@ Hay que hacer una transición para que el micro:bit pueda interactuar con el pro
 - KEYISPRESSED no se puede tener 
 - Si boton b y suelto cambio de color
 
-<details>
-
 **COMO FUNCIONA LA APP**
 
 <img width="1918" height="846" alt="imagen" src="https://github.com/user-attachments/assets/3201baf0-4917-43e6-922f-32a330f9edea" />
 
+
+
+<details>
 
 <summary>GITBASH</summary>
 
@@ -145,5 +146,6 @@ Hay que hacer una transición para que el micro:bit pueda interactuar con el pro
 
 
 ## Bitácora de reflexión
+
 
 
