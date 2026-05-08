@@ -700,6 +700,7 @@ npm install osc
 
 Y mi mesa de Open Stage Control fabricada fue:
 
+unidad-7/CONTROLADORES67.json
 
 
 
