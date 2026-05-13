@@ -182,30 +182,30 @@ El patrón está inspirado en *Closer* (90 BPM = 0.375 cps):
 ### CÓDIGO PARA EL MICROBIT
 
 ```py
-  from microbit import *
+from microbit import *
 import utime
 import struct
 
 uart.init(baudrate=115200)
 
 def send_packet(x, y, btnA, btnB):
-x = max(-32768, min(32767, x))
-y = max(-32768, min(32767, y))
-x_bytes = struct.pack(">h", x)
-y_bytes = struct.pack(">h", y)
-a = 1 if btnA else 0
-b = 1 if btnB else 0
-chk = (x_bytes[0] + x_bytes[1] + y_bytes[0] + y_bytes[1] + a + b) & 0xFF
-packet = bytes([0xAA, x_bytes[0], x_bytes[1], y_bytes[0], y_bytes[1], a, b, chk])
-uart.write(packet)
+    x = max(-32768, min(32767, x))
+    y = max(-32768, min(32767, y))
+    x_bytes = struct.pack(">h", x)
+    y_bytes = struct.pack(">h", y)
+    a = 1 if btnA else 0
+    b = 1 if btnB else 0
+    chk = (x_bytes[0] + x_bytes[1] + y_bytes[0] + y_bytes[1] + a + b) & 0xFF
+    packet = bytes([0xAA, x_bytes[0], x_bytes[1], y_bytes[0], y_bytes[1], a, b, chk])
+    uart.write(packet)
 
 while True:
-x = accelerometer.get_x()
-y = accelerometer.get_y()
-a = button_a.is_pressed()
-b = button_b.is_pressed()
-send_packet(x, y, a, b)
-utime.sleep_ms(33)
+    x = accelerometer.get_x()
+    y = accelerometer.get_y()
+    a = button_a.is_pressed()
+    b = button_b.is_pressed()
+    send_packet(x, y, a, b)
+    utime.sleep_ms(33)
 ```
 
 </details>
