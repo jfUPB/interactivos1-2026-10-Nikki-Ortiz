@@ -1184,9 +1184,6 @@ La obra toma *Closer* de Nine Inch Nails como referente no para reproducirla sin
 - El **bombo en cada beat** crea la obsesión mecánica característica de la canción. Visualmente se traduce en círculos que explotan desde el centro del canvas en cada pulso.
 - El **rayo del open hi-hat** es el elemento más reconocible de Closer. Tener una forma visual propia (el zigzag de `drawLightning`) para este sonido crea una correspondencia directa entre el icono sonoro y el icono visual de la obra.
 - El **triángulo de guitarra** aparece solo cuando el performer inclina el micro:bit, haciendo que la capa melódica sea literalmente un gesto corporal. Si el performer no se mueve, la guitarra desaparece.
-- El **control de opacidad** desde OSC permite al performer construir tensión fundiendo la imagen hacia negro y liberarla de golpe, creando una dinámica narrativa en la performance.
-La arquitectura del curso hace posible que todos estos elementos coexistan sin interferencia: cada fuente entra por su propio canal, se normaliza antes de llegar al frontend, y el sketch solo trabaja con estado limpio y calculado.
-
 ---
 
 **PREGUNTAS**
@@ -1202,7 +1199,7 @@ La arquitectura del curso hace posible que todos estos elementos coexistan sin i
 
 ¿Qué hace cada Adapter?
 
-Cada adapter tiene tres responsabilidades: recibir los datos crudos de su fuente, normalizarlos a un contrato claro, y entregarlos a `bridgeServer.js`. El `MicrobitBinaryAdapter` además verifica la integridad del paquete con el checksum antes de emitir los datos.
+Cada adapter tiene tres responsabilidades: recibir los datos crudos de su fuente, normalizarlos a un contrato claro, y entregarlos a `bridgeServer.js`. El `MicrobitBinaryAdapter` además verifica la integridad del paquete con el checksum antes de emitir los datos. Además de su respectivo rol performativo ya mencionado
 
 ---
 
@@ -1216,7 +1213,7 @@ Actúa como concentrador y distribuidor. Recibe los datos normalizados de los tr
 
 1. `bridgeClient.js` mantiene la conexión WebSocket con el servidor, inspecciona `msg.type` y dispara un evento hacia la FSM con `postEvent({type: DATA, payload})`.
 2. `FSMTask` recibe ese evento y, si está en `estado_corriendo`, lo delega a `updateLogic`.
-3. `updateLogic` actualiza el estado del sistema: para `microbit` actualiza `_rawScale` y `_rawY`, para `strudel` agrega a `scheduledEvents`, para `osc` actualiza `controls.colors` y `controls.opacity`.
+3. `updateLogic` actualiza el estado del sistema: para `microbit` actualiza `_rawScale` y `_rawY`, para `strudel` agrega a `scheduledEvents`, para `osc` actualiza `controls.colors`
 4. `drawRunning` lee el estado ya calculado (`controls`, `activeAnimations`) y dibuja. No toma ninguna decisión de lógica.
 
 ---
@@ -1225,7 +1222,7 @@ Actúa como concentrador y distribuidor. Recibe los datos normalizados de los tr
 
 - **micro:bit:** Control físico gestual. Botón A agranda todas las formas, botón B las achica. La inclinación en eje Y hace aparecer el triángulo de guitarra — la capa melódica es literalmente un gesto corporal.
 - **Strudel:** Motor musical y disparador de eventos visuales. Cada familia de sonido activa una forma distinta sincronizada con el audio: bombo = círculo, caja = rayos, hi-hat = cuadrado, open hi-hat = rayo.
-- **Open Stage Control:** Control paramétrico persistente. El performer modifica el color de cada familia de sonido y la opacidad global durante la ejecución sin interrumpir el flujo.
+- **Open Stage Control:** Control paramétrico persistente. El performer modifica el color de cada familia de sonido.
 
 ---
 
